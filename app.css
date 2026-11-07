@@ -1,0 +1,47 @@
+:root{--bg:#000;--tx:#fff;--t2:rgba(235,235,245,.6);--t3:rgba(235,235,245,.3);--sep:rgba(84,84,88,.55);--c1:#1c1c1e;--c2:#2c2c2e;
+--green:#00d35a;--red:#ff453a;--orange:#ff9f0a;--cyan:#64d2ff;--blue:#0a84ff;--yellow:#ffd60a;--pink:#ff6b9a}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{background:var(--bg);color:var(--tx);font:16px/1.35 -apple-system,"SF Pro Text",system-ui,sans-serif;font-variant-numeric:tabular-nums;
+padding:env(safe-area-inset-top) 0 calc(84px + env(safe-area-inset-bottom));min-height:100vh}
+main{padding:0 16px}.hidden{display:none!important}
+.err{background:var(--red);color:#fff;font-size:14px;padding:8px 16px;position:sticky;top:0;z-index:5}
+.nav{display:flex;align-items:center;gap:12px;height:52px}.nav .t{flex:1;font-weight:600;font-size:17px}
+.ib{min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;background:none;border:0;color:var(--tx);font-size:20px;position:relative}
+.av{width:32px;height:32px;border-radius:50%;background:var(--c2);display:flex;align-items:center;justify-content:center;font-size:14px}
+.dot{position:absolute;top:10px;right:10px;width:8px;height:8px;border-radius:50%;background:var(--green)}
+.big{font:700 66px/1.05 -apple-system,"SF Pro Display",system-ui;letter-spacing:-1px;display:flex;align-items:center;gap:10px;margin-top:8px}
+.odo{display:inline-flex;overflow:hidden;height:1.05em}.odo span{display:inline-block}
+.dg{display:inline-block;height:1.05em;overflow:hidden;vertical-align:top}.dg i{display:block;font-style:normal;transition:transform .6s ease-out}
+.pill{display:inline-flex;align-items:center;border-radius:999px;padding:3px 10px;font-size:13px;font-weight:600}
+.paper{background:var(--orange);color:#000}.mult{background:var(--green);color:#000}
+.mono{font-family:ui-monospace,"SF Mono",monospace}.sub{color:var(--t2);font-size:15px}.up{color:var(--green)}.dn{color:var(--red)}
+.ranges{display:flex;justify-content:space-between;margin:8px 0 20px}.ranges button{min-height:44px;min-width:44px;background:none;border:0;color:var(--t2);font-weight:600;border-radius:10px}
+.ranges button.on{background:var(--c2);color:var(--tx)}
+canvas{width:100%;display:block}.chart{height:220px}
+h2{font-size:20px;font-weight:700;margin:20px 0 10px;display:flex;justify-content:space-between;align-items:baseline}h2 a{font-size:15px;color:var(--blue);text-decoration:none;font-weight:400}
+.car{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px}.car::-webkit-scrollbar{display:none}
+.card{background:var(--c1);flex:0 0 calc(100vw - 32px);aspect-ratio:504/470;border-radius:calc(42 * (100vw - 32px) / 504);scroll-snap-align:center;padding:22px;display:flex;flex-direction:column;gap:8px;overflow:hidden}
+.card .h{display:flex;justify-content:space-between;font-weight:600}.card .n{font:700 34px -apple-system,"SF Pro Display"}
+.feed div{font-size:14px;padding:4px 0;border-bottom:.5px solid var(--sep);display:flex;justify-content:space-between;gap:8px}
+.strike{color:var(--t3);text-decoration:line-through;text-decoration-color:var(--red)}
+.strips{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.strips i{height:10px;border-radius:5px;background:var(--c2)}.strips i.g{background:var(--green)}.strips i.r{background:var(--red)}
+.bar{height:8px;background:var(--c2);border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--green);transition:width 1.2s linear}
+.row{display:flex;align-items:center;gap:12px;min-height:60px;border-bottom:.5px solid var(--sep);padding:8px 0}.row .m{flex:1;min-width:0}.row .m div:first-child{font-weight:600}
+.row .v{text-align:right;font-weight:600}.ico{width:36px;height:36px;border-radius:50%;background:var(--c2);display:flex;align-items:center;justify-content:center;flex:0 0 36px}
+.btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:50px;border-radius:14px;border:0;background:var(--green);color:#000;font-weight:700;font-size:17px;text-decoration:none;margin:16px 0}
+.btn.sec{background:var(--c2);color:var(--tx)}
+.tabs{position:fixed;bottom:0;left:0;right:0;display:flex;background:rgba(18,18,20,.72);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:.5px solid var(--sep);padding-bottom:env(safe-area-inset-bottom)}
+.tabs button{flex:1;min-height:56px;background:none;border:0;color:var(--t2);font-size:12px;font-weight:600}.tabs button.on{color:var(--tx)}
+.sk{background:var(--c1);border-radius:14px;animation:pulse 1.2s ease-in-out infinite alternate}@keyframes pulse{from{opacity:.5}to{opacity:1}}
+.empty{color:var(--t2);padding:24px 0;text-align:center}
+.set{background:var(--c1);border-radius:14px;padding:4px 16px;margin-bottom:12px}.set label{display:flex;flex-direction:column;gap:6px;padding:10px 0;border-bottom:.5px solid var(--sep);font-size:14px}
+.set input[type=range]{width:100%;min-height:32px}.set .nf{display:flex;justify-content:space-between;align-items:center}
+.set input[type=number],.set input[type=text],select{background:var(--c2);color:var(--tx);border:0;border-radius:8px;padding:8px;width:110px;font:inherit;min-height:36px}
+.seg{display:flex;background:var(--c2);border-radius:10px;padding:2px}.seg button{flex:1;min-height:40px;border:0;background:none;color:var(--tx);border-radius:8px;font-weight:600}.seg button.on{background:#636366}
+.disc{height:30px;border-radius:50%/40%;background:var(--c2);margin:-8px auto 0;width:70%;position:relative;transition:background .15s}
+.disc.g{background:var(--green)}.disc.r{background:var(--red)}.disc.beam{box-shadow:0 0 0 2px var(--cyan)}
+.lr{display:flex;justify-content:space-between;padding:10px 0;border-bottom:.5px solid var(--sep);font-size:15px}.lr .x{color:var(--t3)}
+.ring{width:120px;height:120px}.chip{background:var(--c2);border-radius:999px;padding:3px 10px;font-size:13px}
+.sw{width:51px;height:31px;border-radius:16px;background:var(--c2);border:0;position:relative;min-height:31px}.sw.on{background:var(--green)}
+.sw::after{content:"";position:absolute;top:2px;left:2px;width:27px;height:27px;border-radius:50%;background:#fff;transition:left .2s}.sw.on::after{left:22px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
